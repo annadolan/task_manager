@@ -1,6 +1,12 @@
-<h1>All Tasks</h1>
+<h1 class ="text-center" style="font-weight: lighter">All Tasks</h1>
 
+<div class = "text-center">
+<div class="row well">
 <% @tasks.each do |task| %>
-  <h3><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
+  <div class="col-md-4">
+  <h3 style="font-weight: lighter"><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
   <p><%= task.description %></p>
+  </div>
 <% end %>
+</div>
+</div>
