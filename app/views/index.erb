@@ -4,9 +4,11 @@
 <div class="row well">
 <% @tasks.each do |task| %>
   <div class="col-md-4">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
   <h3 style="font-weight: lighter"><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
   <p><%= task.description %></p>
   </div>
 <% end %>
 </div>
+<p><a href="/"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-home"></span> Home</button></a></p>
 </div>
