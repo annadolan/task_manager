@@ -7,8 +7,20 @@
     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
   <h3 style="font-weight: lighter"><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
   <p><%= task.description %></p>
+  <div class="row">
+    <div class="col-md-6">
+    <a href="/tasks/<%= task.id %>/edit"><button type="button" class="btn btn-default">Edit</button></a>
+  </div>
+  <div class="col-md-6">
+  <form action="/tasks/<%= task.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" class="btn btn-danger" value="Delete">
+  </form>
+</div>
+</div>
   </div>
 <% end %>
 </div>
-<p><a href="/"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-home"></span> Home</button></a></p>
+
+<p><a href="/"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-home"></span> Home</button></a></p>
 </div>
